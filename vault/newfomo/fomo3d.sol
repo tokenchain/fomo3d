@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import "./SafeMath.sol";
-import "hardhat/console.sol";
+import "../vendor/v0.8/SafeMath.sol";
 
 contract fomo3d {
     using SafeMath for uint256;
@@ -75,9 +74,9 @@ contract fomo3d {
                 address(this)
             )
         );
-        console.log("chainId", chainId);
-        console.log("owner", owner);
-        console.log("contract ", address(this));
+      //  console.log("chainId", chainId);
+      //  console.log("owner", owner);
+      //  console.log("contract ", address(this));
     }
 
     modifier onlyOwner() {
@@ -86,15 +85,15 @@ contract fomo3d {
     }
 
     function setActionTime(uint256 _time) external onlyOwner {
-        console.log("block.timestamp", block.timestamp);
+       // console.log("block.timestamp", block.timestamp);
         require(
             _time > block.timestamp,
             "Set time must be greater than the current time"
         );
         start_time[rounds] = _time;
-        console.log("start_time[rounds]", start_time[rounds]);
+     //   console.log("start_time[rounds]", start_time[rounds]);
         end_time[rounds] = _time.add(24 * 60 * 20 * 3);
-        console.log("end_time[rounds]", end_time[rounds]);
+      //  console.log("end_time[rounds]", end_time[rounds]);
     }
 
     function nonceOf(address account) public view returns (uint256) {
@@ -106,19 +105,19 @@ contract fomo3d {
         group _team,
         uint256 _rounds
     ) internal {
-        console.log("_buy_key");
-        console.log("end_time", end_time[rounds]);
+      //  console.log("_buy_key");
+      //  console.log("end_time", end_time[rounds]);
         require(_rounds == rounds, "rounds error");
         if (block.timestamp >= end_time[_rounds]) {
-            console.log("1");
+         //   console.log("1");
             rounds = rounds.add(1);
             end_time[rounds] = end_time[rounds].add(24 * 60 * 20 * 3);
             key_final_price = key_init_price;
-            console.log("rounds ", rounds);
-            console.log("end_time", end_time[rounds]);
-            console.log("key_final_price", key_final_price);
+         //   console.log("rounds ", rounds);
+         //   console.log("end_time", end_time[rounds]);
+         //   console.log("key_final_price", key_final_price);
         } else {
-            console.log("2");
+         //   console.log("2");
             team[msg.sender][rounds] = _team;
             uint256 key_add_price = key_increasing_price.mul(_buy_num.sub(1));
             uint256 final_price = key_add_price.add(key_final_price);
@@ -126,8 +125,8 @@ contract fomo3d {
             key_final_price = final_price.add(key_increasing_price);
             one_last_price = one_last_price.mul(_buy_num);
             one_last_price = one_last_price.div(2);
-            console.log("one_last_price", one_last_price);
-            console.log("msg.value", msg.value);
+         //   console.log("one_last_price", one_last_price);
+         //   console.log("msg.value", msg.value);
             require(one_last_price == msg.value, "Insufficient payment");
             end_time[rounds] = end_time[rounds].add(_buy_num.mul(30));
         }
@@ -152,10 +151,10 @@ contract fomo3d {
         bytes32 r,
         bytes32 s
     ) external payable {
-        console.log("vault buy   ");
-        console.log(_account);
-        console.log(_buy_num);
-        console.log(nonce);
+        // console.log("vault buy   ");
+        // console.log(_account);
+        // console.log(_buy_num);
+        // console.log(nonce);
         bytes32 digest = keccak256(
             abi.encodePacked(
                 "\x19\x01",
@@ -173,7 +172,7 @@ contract fomo3d {
             )
         );
         address recoveredAddress = ecrecover(digest, v, r, s);
-        console.log(recoveredAddress);
+        //console.log(recoveredAddress);
         require(
             recoveredAddress == owner &&
                 _account == msg.sender &&
@@ -195,9 +194,9 @@ contract fomo3d {
         bytes32 r,
         bytes32 s
     ) public {
-        console.log(_account);
-        console.log(_number);
-        console.log(nonce);
+        //console.log(_account);
+        //console.log(_number);
+        //console.log(nonce);
         bytes32 digest = keccak256(
             abi.encodePacked(
                 "\x19\x01",
@@ -214,7 +213,7 @@ contract fomo3d {
         );
 
         address recoveredAddress = ecrecover(digest, v, r, s);
-        console.log("recoveredAddress", recoveredAddress);
+        //console.log("recoveredAddress", recoveredAddress);
         require(
             recoveredAddress == owner &&
                 _account == msg.sender &&
