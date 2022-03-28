@@ -1,0 +1,177 @@
+#@truffle migrate
+node --stack-size=1200  /usr/local/node-v15.6.0-linux-x64/lib/node_modules/truffle/build/cli.bundled.js  migrate  --reset --network development --f 2
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1337
+> Block gas limit: 11388203 (0xadc52b)
+
+
+2_deploy_fomo3d.js
+==================
+
+   Deploying 'SafeMath'
+   --------------------
+   > transaction hash:    0x39dee88a8fd38c56539b50e21fe169acb5fdd22645d8c499dcf5e7021da5cfcd
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xF2c13f92ed0A84b0Af525d2B55A423c365CE257f
+   > block number:        11
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            69912 (0x11118)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00139824 ETH
+
+
+   Deploying 'F3Ddatasets'
+   -----------------------
+   > transaction hash:    0x1d762001ef4b75e8a7f09faf9203e2bd032204d7b3b7729a1612a97c4bf7bf94
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x5B91AF7630129F96984599E9ecCEC70DAc9E22bD
+   > block number:        12
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            69912 (0x11118)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00139824 ETH
+
+
+   Deploying 'MSFun'
+   -----------------
+   > transaction hash:    0x48f45e257dd77a9888ad87e7738d1031c13f7e8f07faeca62c095a2d22fed880
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x377c815a50C97F4c38229C972Dfe60aAbf441255
+   > block number:        13
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            69912 (0x11118)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00139824 ETH
+
+
+   Deploying 'NameFilter'
+   ----------------------
+   > transaction hash:    0xa33c64c09fef26a9f64f671e6bf8219caee2634a6f8e480bcb423f8f4817f5d6
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xDC529be161bffdBd1A39C68f95a3c5Db70112FF5
+   > block number:        14
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            69912 (0x11118)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00139824 ETH
+
+
+   Deploying 'UintCompressor'
+   --------------------------
+   > transaction hash:    0x1b11d24748faf56469952afeda12f9a26b67125489a964bc368d19fdd3d1300e
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x1f903E29f1C5954A07DBF920B4F8C333d87ab1Da
+   > block number:        15
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            69912 (0x11118)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00139824 ETH
+
+
+   Deploying 'F3DKeysCalcLong'
+   ---------------------------
+   > transaction hash:    0x46a83399ff6663f7be6fe09bd678143d6e438ee23ca695f65f003048f36c83cc
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xD1db81664E319aAab4229Ce1bD9aE5fAABEe6e2d
+   > block number:        16
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            69900 (0x1110c)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.001398 ETH
+
+
+   Deploying 'F3Devents'
+   ---------------------
+   > transaction hash:    0x80ade364926e498e29aecd64341c25207604f8a6d2f5184c9ed24565d604acc5
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4e2bA06456cb365768c4c6A061ac771Eb13EbD74
+   > block number:        17
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            64894 (0xfd7e)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00129788 ETH
+
+
+   Deploying 'TeamJust'
+   --------------------
+   > transaction hash:    0x316968bf5fd18111eb91ce9dea8f7812954e28b250217a6c615fb52ab220de5b
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xA38a72976E64339541E3422f6C50eAC46f926487
+   > block number:        18
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            1419372 (0x15a86c)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02838744 ETH
+
+
+   Deploying 'PlayerBook'
+   ----------------------
+   > transaction hash:    0x879f49ab37a22e5608b83c4648a77c2016510572afb0b939631bf0db8f35c318
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4d6981Ff8140b0a1dB265Ee89dD1C3bE0AD88A68
+   > block number:        19
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            2859717 (0x2ba2c5)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.05719434 ETH
+
+
+   Deploying 'FoMo3Dlong'
+   ----------------------
+   > transaction hash:    0x2641f11f24d56ed5ea87fda16ef6341099fb0f62fefed5aa9270c581dd2e285d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xB5aB20A0Dc623bf41DC1889d9ba715CE698F880D
+   > block number:        20
+   > block timestamp:     1611659248
+   > account:             0x1432F1FF4fF3Ae5c629893B0eD28D2d8eAed4E5E
+   > balance:             115792089237316195423570985008687907853269984665640564039457.584007913129639927
+   > gas used:            4964569 (0x4bc0d9)
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.09929138 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.19456024 ETH
+
+
+Summary
+=======
+> Total deployments:   10
+> Final cost:          0.19456024 ETH
